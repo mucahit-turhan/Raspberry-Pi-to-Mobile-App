@@ -1,15 +1,15 @@
 <?php
 
 $dbhost = 'localhost';
-$dbuser = 'root';
-$dbpassword = 'mucahit';
-$dbname = 'temp_database';
+$dbuser = 'user';
+$dbpassword = 'password';
+$dbname = 'database_name';
 
 try{
 
 	$dbconnection = new mysqli($dbhost, $dbuser, $dbpassword, $dbname);
 
-	$result = $dbconnection->query("SELECT * FROM tempLog");
+	$result = $dbconnection->query("SELECT * FROM table_name");
 
 	$dbarray = array();
 
