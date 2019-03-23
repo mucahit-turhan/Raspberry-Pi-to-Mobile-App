@@ -6,7 +6,8 @@ import datetime
 from time import strftime
 
 def read_temperature():
-	print("code of sensor read will be added")
+	print("code of reading sensor will be added")
+	#return temp
 
 while True:
 	#temperature = read_temperature()
@@ -22,7 +23,7 @@ while True:
                			"(datetime, temperature) "
                			"VALUES (%s, %s)")
 		
-		values = (datetime,50);
+		values = (datetime,50); # After read_temperature is completed, function will call instead of 50 = read_temperature()
 		cursor = connection.cursor()
 		result = cursor.execute(insert_query,values)
 		connection.commit()
